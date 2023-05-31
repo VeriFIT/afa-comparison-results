@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Comparison</title>
+    <style>
+      body {
+        background-color: #222222;
+        color: #dddddd;
+      }
+      img {
+        max-width: 100%;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .image-container {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Comparison</h1>
+    <div class="container">
+      <div class="image-container">
+        <h2>Image 1</h2>
+        <input type="file" accept="image/*" onchange="previewImage(event, 'image1')">
+        <img id="image1">
+      </div>
+      <div class="image-container">
+        <h2>Image 2</h2>
+        <input type="file" accept="image/*" onchange="previewImage(event, 'image2')">
+        <img id="image2">
+      </div>
+    </div>
+    <script>
+      function previewImage(event, imageId) {
+        var reader = new FileReader();
+        reader.onload = function() {
+          var output = document.getElementById(imageId);
+          output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    </script>
+  </body>
+</html>
+
