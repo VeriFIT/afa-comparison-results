@@ -16,6 +16,9 @@ that was accepted to CADE'23.
     * Cloning our benchmarks from this mirror requires <code>git-lfs</code> support (see [git-lfs](https://git-lfs.com/))
     * Note that the benchmarks are quite extensive and occupies more than 10GB of storage.
 
+Note that you might need to install <code>git-lfs</code> support (see [git-lfs](https://git-lfs.com/))
+and run `git lfs pull` for pulling the files, since they are stored in `git-lfs` format.
+
 ## Installation
 
 The replication script is in form of jupyter notebook. First, install `jupyter` and
